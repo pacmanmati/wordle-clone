@@ -8,7 +8,10 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		paths: {
+			base: process.env.NODE_ENV === 'production' ? '/wordle-clone' : ''
+		}
 	}
 };
 
